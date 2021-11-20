@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Update the information for: {{ post.name }}</h1>
+<div class="container">
+    <form action="" autocomplete="off" method="post">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            <fieldset>
+                {{ form.name.label }}
+                {{ form.name(class='form-control', placeholder='Name') }}
+            </fieldset>
+            <fieldset>
+                {{ form.phonenum.label }}
+                {{ form.phonenum(class='form-control', placeholder='Phone Number') }}
+            </fieldset>
+        </div>
+        {{ form.submit(class='btn btn-success') }}
+    </form>
+</div>
+
+{% endblock content %}
